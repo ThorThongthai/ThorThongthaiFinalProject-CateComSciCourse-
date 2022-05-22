@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <!--Choropleth Map-->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  <script src="Choropleth_Map.js" defer></script>
+
+  <!--Horizontal Bar Chart-->
+  <script src="Horizontal_Bar_Chart.js" defer></script>
+
+  <!--Bubble Chart-->
+  <script src="Bubble_Chart.js" defer></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>Happiness in Different Countries</h2>
+    <p>
+      For my project I wanted to look at happiness levels in different countries and
+      compare them. To do this, I pulled from the 2021 World Happiness Report.
+      I visualized the happiness of different countries in different ways.
+    </p>
+    <p>
+      It’s also very important to note that the 
+      <a href="https://happiness-report.s3.amazonaws.com/2021/Appendix1WHR2021C2.pdf" target="_blank">
+      2021 World Happiness Report</a> uses self-reported
+      data. This means that happiness was measured by asking individuals to gauge how happy they
+      think they feel. The specific question the report used was this: “Please imagine a ladder,
+      with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents
+      the best possible life for you and the bottom of the ladder represents the worst possible
+      life for you. On which step of the ladder would you say you personally feel you stand at
+      this time?” Although the question is well formulated, there is still always an inherent
+      bias to self-reported accounts of phenomena. I thought it was important to acknowledge
+      the limitations of the dataset I pulled from and therefore acknowledge the limitations
+      of my data visualizations as well.
+    </p>
+    <p>
+      For my first data visualization, I created a world map with shades of the same color
+      to represent Happiness levels in different countries. <strong>The darker the color,
+        the happier the country. Grey means there is no data for that country.</strong>
+      The advantage to this visualization is that you can see visually which regions of the
+      world are happier than other regions. Comparisons between different continents become
+      really easy. For example, you can see that people in North and South America seem to
+      be happier than people in Africa.
+    </p>
+    <!--Choropleth Map-->
+    <div id="Choropleth_Map"></div>
+
+    <p>
+      For my second data visualization, I created a horizontal bar chart that ranks all of
+      the countries from most happy to least happy. <strong>The x axis is happiness score.</strong>
+    </p>
+    <!--Horizontal Bar Chart-->
+    <div id="Horizontal_Bar_Chart"></div>
+
+    <p>
+      For my third data visualization, I created a bubble chart where the size of the bubble
+      corresponds with a country’s happiness level. The bigger the bubble, the happier the
+      country. I thought that this data visualization was fun and looks cool. The advantage
+      is similar to the bar chart where you can see with a glance which countries are happiest.
+    </p>
+    <!--Bubble Chart-->
+    <div id="Bubble_Chart"></div>
+
+    <p>
+      Although my visualizations offer compelling ways to compare happiness levels between
+      countries, it doesn’t offer much explanation to the factors that may be contributing to
+      happiness. To evaluate these factors, I used data from the same 2021 World Happiness
+      Report and drew linear regressions between different factors and happiness levels to see
+      how correlated a given factor is to happiness levels.
+      Here are my findings:
+    </p>
+
+    <img src="Social Support.png" width="500">
+    <img src="Freedom to make life choices.png" width="500">
+    <img src="Healthy life expectancy.png" width="500">
+    <img src="GDP per capita.png" width="500">
+
+    <p>
+      As one can see, all of these factors seem to correlate with happiness to some degree.
+      That being said, the correlation between the factors and happiness isn’t that strong,
+      the r squared value ranging from 0.36 to 0.62. GDP per capita seems to be the factor
+      that correlates with happiness the most, with a r squared value of 0.623.
+    </p>
+    <br>
+    <br>
+    <br>
+  </div>
+</body>
+
+</html>

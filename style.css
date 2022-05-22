@@ -1,0 +1,15 @@
+.bar{
+    fill: lightblue;
+}
+.highlight{
+    fill: palevioletred;
+}
+.text {
+    font-family: sans-serif;
+    fill: black;
+    font-size: 10px;
+}
+
+.container {
+    padding: 30px;
+}
